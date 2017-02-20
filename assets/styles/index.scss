@@ -22,30 +22,54 @@ body {
 
 .content-holder {
   margin: auto;
-  width: 650px;
+  max-width: 650px;
   padding-top: 32px;
 }
 
-.giftees-holder {
-  background-color: red;
-  float: left;
-  height: 500px;
-  width: 150px;
+@media (min-width: 769px) {
+  .giftees-holder {
+    background-color: red;
+    // float: left;
+    height: 500px;
+    max-width: 150px;
+  }
+
+  .notes-holder {
+    background-color: blue;
+    // float: left;
+    height: 500px;
+    max-width: 250px;
+  }
+
+  .ideas-holder {
+    background-color: yellow;
+    // float: left;
+    height: 500px;
+    max-width: 250px;
+  }
 }
 
-.notes-holder {
-  background-color: blue;
-  float: left;
-  height: 500px;
-  width: 250px;
+@media (max-width: 768px){
+  .giftees-holder {
+    background-color: red;
+    // float: left;
+    height: 100px;
+  }
+
+  .notes-holder {
+    background-color: blue;
+    // float: left;
+    height: 250px;
+  }
+
+  .ideas-holder {
+    background-color: yellow;
+    // float: left;
+    height: 250px;
+  }
 }
 
-.ideas-holder {
-  background-color: yellow;
-  float: left;
-  height: 500px;
-  width: 250px;
-}
+
 
 .header {
   background-color: $yellow;
