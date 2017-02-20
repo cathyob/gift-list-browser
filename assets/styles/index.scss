@@ -1,2 +1,70 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$yellow: #ffff76; // title background
+$cyan: #02d8ea; // body background
+
+body {
+  background-color: $cyan;
+}
+
+.body-active-user {
+  width: 100%;
+}
+
+.button-holder {
+  background-color: #363636;
+  float: right;
+  height: 50px;
+  width: 100px;
+  margin-right: 8px;
+}
+
+.content-holder {
+  margin: auto;
+  width: 650px;
+  padding-top: 32px;
+}
+
+.giftees-holder {
+  background-color: red;
+  float: left;
+  height: 500px;
+  width: 150px;
+}
+
+.notes-holder {
+  background-color: blue;
+  float: left;
+  height: 500px;
+  width: 250px;
+}
+
+.ideas-holder {
+  background-color: yellow;
+  float: left;
+  height: 500px;
+  width: 250px;
+}
+
+.header {
+  background-color: $yellow;
+  height: 50px;
+  width: 100%;
+  // padding: 8px;
+}
+
+.image-header {
+  height: 50px;
+  width: 133px;
+}
+
+footer {
+  text-align: center;
+  background-color: $yellow;
+  bottom: 0; // fixed position at the bottom of the scren
+  clear: both;
+  color: #363636;
+  position: fixed; // uses the bottom location
+  width: 100%; // keeps it the width of the page
+}
