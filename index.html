@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Gifter</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -11,18 +11,132 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-      <!-- added font style-->
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body>
       <div class="header">
-        <img src="assets/logoplaceholder.png" class="image-header"/>
-        <div class="button-holder">
+        <img src="assets/logoplaceholder.png" alt="Gifter" class="image-header"/>
+        <div class="button-holder" id="waiting-options">
+          <div class="btn-group"> <!-- SIGN IN-->
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign In
+            </button>
+              <form class="dropdown-menu dropdown-menu-right" id="sign-in">
+                <fieldset>
+                  <div class="input">
+                    <label class="email">
+                    Username
+                    <input class="email-sign-in" type="text" name="credentials[email]">
+                  </label>
+                </div>
+                  <div class="input">
+                    <label class="password">
+                    Password
+                    <input class="pass-sign-in" type="password" name="credentials[password]">
+                  </label>
+                </div>
+                  <p class="sign-in-error-message"></p>
+                  <input class="close-dropdown" type="submit" name="submit" value="Sign in!">
+              </fieldset>
+            </form>
+          </div>
+          <div class="btn-group"> <!-- SIGN UP-->
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign Up
+            </button>
+            <form class="dropdown-menu dropdown-menu-right" id="sign-up">
+              <fieldset>
+                <div class="input">
+                  <label class="email">
+                  Username
+                  <input class="email-sign-up"
+                  type="text" name="credentials[email]">
+                  </label>
+                </div>
+                <div class="input">
+                  <label class="password">
+                  Password
+                  <input class="password-sign-up" type="password" name="credentials[password]">
+                  </label>
+                </div>
+                <div class="input">
+                  <label class="password_confirmation">
+                  Password Confirmation
+                  <input class="password-confirmation-sign-up" type="password" name="credentials[password_confirmation]">
+                  </label>
+                </div>
+                  <p class="sign-up-message"></p>
+                <input class="close-dropdown" type="submit" name="submit" value="Sign up!">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="button-holder hidden" id="logged-in-options">
+          <div class="btn-group"> <!-- CHANGE PASSWORD AND SIGN OUT-->
+            <button type="button" class="btn btn-default dropdown-toggle logged-in-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+              <form class="dropdown-menu dropdown-menu-right" id="change-password">
+                <fieldset>
+                  <div class="input">
+                    <label>
+                    Current Password
+                    <input class="current-password-change" type="password" name="passwords[old]">
+                  </label>
+                </div>
+                  <div class="input">
+                    <label>
+                    New Password
+                    <input class="new-password-change" type="password" name="passwords[new]">
+                  </label>
+                </div>
+                  <p class="change-pw-message"></p>
+                  <input class="close-dropdown" type="submit" name="submit" value="Change Password!">
+                </fieldset>
+                <hr>
+                <p class="sign-out-message"></p>
+                <button class="btn btn-default sign-out-button" value="input" type="submit" name="submit" id="sign-out">Sign Out</button>
+              </form>
+          </div>
         </div>
       </div>
       <div class="body-active-user container">
-        <div class="content-holder row-fluid">
+        <div class="content-holder waiting">
+          <div class="waiting-image-holder" id="waiting-on-user">
+            <p>loading gif here</p>
+            <!-- <img src="https://www.arinui.com/media/load2.gif" alt="Waiting for sign in" class="loading-image"> -->
+          </div>
+        </div>
+        <div class="content-holder row-fluid hidden" id="user-logged-in">
           <div class="giftees-holder col-sm-4">
+            <!-- MAKE GIFTEE DROPDOWN-->
+            <!-- MAKE GIFTEE INPUT + BUTTON-->
+              <div class="input-group make-giftee-namer">
+                <input type="text" class="form-control giftee-name-taker" placeholder="Giftee name...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Create!</button>
+                </span>
+              </div>
+            <div class="giftees-lister">
+              <div>Test 1</div>
+              <div>Test 2</div>
+              <div>Test 3</div>
+              <div>Test 4</div>
+              <div>Test 5</div>
+              <div>Test 6</div>
+              <div>Test 7</div>
+              <div>Test 8</div>
+              <div>Test 9</div>
+              <div>Test 10</div>
+              <div>Test 11</div>
+              <div>Test 12</div>
+              <div>Test 13</div>
+              <div>Test 14</div>
+              <div>Test 15</div>
+              <div>Test 16</div>
+              <div>Test 17</div>
+              <div>Test 18</div>
+              <div>Test 19</div>
+              <div>Test 20</div>
+            </div>
           </div>
           <div class="notes-holder col-sm-4">
           </div>

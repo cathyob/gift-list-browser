@@ -3,6 +3,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $yellow: #ffff76; // title background
 $cyan: #02d8ea; // body background
+$dk-grey: #363636;
+$lt-red: #ff8660;
+
+$padding: 8px;
 
 body {
   background-color: $cyan;
@@ -12,70 +16,150 @@ body {
   width: 100%;
 }
 
+.btn {
+  background-color: $yellow !important;
+  border: 1px solid $dk-grey !important;
+  border-radius: 0;
+  color: $dk-grey !important;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+
+.btn:hover {
+  background-color: $lt-red !important;
+  border: 1px solid $dk-grey !important;
+  color: $dk-grey !important;
+}
+
+.btn:active {
+  background-color: $lt-red !important;
+  border: 1px solid $dk-grey  !important;
+  color: $dk-grey  !important;
+}
+
 .button-holder {
-  background-color: #363636;
   float: right;
   height: 50px;
-  width: 100px;
-  margin-right: 8px;
+  margin-right: $padding;
 }
 
 .content-holder {
   margin: auto;
-  max-width: 650px;
+  max-width: 675px;
   padding-top: 32px;
+}
+
+// is the actual button (not the dropdown part)
+.dropdown-toggle {
+  background-color: $lt-red;
+  border: 1px solid $dk-grey;
+  color: $dk-grey;
+  margin-top: $padding;
+}
+
+// background top and bottom of button dropdowns
+.dropdown-menu {
+  background-color: $lt-red;
+  border-radius: 0;
+  color: $dk-grey;
+}
+
+// middle of dropdown menu background/font
+fieldset {
+  background-color: $lt-red;
+  color: $dk-grey;
+}
+
+// padding to either side of the inputs in dropdown-menus
+form {
+  padding-left: $padding / 2 !important;
+  padding-right: $padding / 2 !important;
+}
+
+// is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
+input {
+  background-color: $lt-red;
+  border: 1px solid $dk-grey;
+  color: $dk-grey;
+  float: right;
+}
+
+.loading-image {
+  height: 600px;
+  width: 600px;
 }
 
 @media (min-width: 769px) {
   .giftees-holder {
-    background-color: red;
+    background-color: $lt-red;
     // float: left;
     height: 500px;
-    max-width: 150px;
+    padding: 0;
+    max-width: 175px;
+    overflow-y: scroll;
   }
 
   .notes-holder {
-    background-color: blue;
+    background-color: $yellow;
     // float: left;
     height: 500px;
     max-width: 250px;
+    overflow-y: scroll;
+    border-left: 1px solid $dk-grey;
+    border-right: 1px solid $dk-grey;
   }
 
   .ideas-holder {
-    background-color: yellow;
+    background-color: $yellow;
     // float: left;
     height: 500px;
     max-width: 250px;
+    overflow-y: scroll;
   }
 }
 
 @media (max-width: 768px){
   .giftees-holder {
-    background-color: red;
+    background-color: $lt-red;
     // float: left;
-    height: 100px;
+    height: 120px;
+    overflow-y: scroll;
   }
 
   .notes-holder {
-    background-color: blue;
+    background-color: $yellow;
+    border-top: 1px solid $dk-grey;
+    border-bottom: 1px solid $dk-grey;
     // float: left;
     height: 250px;
+    overflow-y: scroll;
   }
 
   .ideas-holder {
-    background-color: yellow;
+    background-color: $yellow;
     // float: left;
     height: 250px;
+    overflow-y: scroll;
   }
 }
-
-
 
 .header {
   background-color: $yellow;
   height: 50px;
   width: 100%;
   // padding: 8px;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: $dk-grey;
+  border-style: $dk-grey solid none;
+  border-width: 1px 0;
+  margin: $padding 0;
 }
 
 .image-header {
@@ -88,7 +172,49 @@ footer {
   background-color: $yellow;
   bottom: 0; // fixed position at the bottom of the scren
   clear: both;
-  color: #363636;
+  color: $dk-grey;
   position: fixed; // uses the bottom location
   width: 100%; // keeps it the width of the page
 }
+
+.sign-out-button {
+  float: right;
+}
+
+
+
+.giftee-name-taker {
+  background-color: $lt-red;
+  border: 1px solid $dk-grey !important;
+  border-radius: 0;
+  color: $dk-grey;
+  padding: $padding / 2;
+}
+
+.giftee-name-taker {
+  background-color: $lt-red;
+  border: 1px solid $dk-grey !important;
+  border-radius: 0;
+  color: $dk-grey;
+  padding: $padding / 2;
+}
+
+// .make-giftee-namer > button {
+//   background-color: $lt-red !important;
+//   border: 1px solid $dk-grey !important;
+//   border-radius: 0;
+//   color: $dk-grey !important;
+//   margin: 0 !important;
+//   width: 150px;
+//   // -webkit-transition-duration: .2s;
+//   // transition-duration: .2s;
+// }
+//
+// .make-giftee-button > form {
+//   width: 150px;
+//   padding: $padding /2 !important;
+// }
+//
+// .make-giftee-button > input {
+//   width: 100px;
+// }
