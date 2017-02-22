@@ -1,6 +1,7 @@
 'use strict';
 
 const store = require('../store');
+const session = require('../session/events.js');
 
 const signInSuccess = (data) => {
   // these remove text from input fields and messages when successfully submitted
@@ -13,6 +14,9 @@ const signInSuccess = (data) => {
   $('.sign-up-message').text("");
   // hide the sign-in and sign-up forms once someone is logged in
   $('#waiting-options').hide();
+  $('.waiting').hide();
+
+  session.startSession();
 
   // reveal the sign-out, change password, and who is logged in as the button name once someone is logged in
   $("#logged-in-options").removeClass('hidden');
@@ -78,12 +82,15 @@ const signOutSuccess = (data) => {
   $('.logged-in-name').text("");
   // reveals please sign in message and waiting image once signed out
   $("#waiting-on-user").removeClass('hidden');
+  $('.waiting').show();
 };
 
 const signOutFailure = (error) => {
   // this will show the sign out didn't work
   $('.sign-out-message').text("Sorry that sign out failed, please try again.");
 };
+
+
 
 
 module.exports = {
