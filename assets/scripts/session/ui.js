@@ -19,7 +19,7 @@ const displayGifteesForUser = (data) => {
 const displayDetailsForGiftee = (data) => {
   $("#giftee-notes-here").removeClass('hidden');
   $("#giftee-ideas-here").removeClass('hidden');
-  console.log(data);
+  // console.log(data);
   $('#notesGeneralInput').val(data.notes.general);
   $('#notesFavoritesInput').val(data.notes.favorites);
   $('#notesSizesInput').val(data.notes.sizes);
@@ -35,10 +35,6 @@ const createNewGiftee = (data) => {
   events.getGifteesForUser();
 };
 
-const notesUpdated = (data) => {
-  console.log('success!!!');
-};
-
 const addNewIdeaToList = (data) => {
   const events = require('../session/events.js');
   events.updateGifteeData(data.idea.giftee.id);
@@ -48,6 +44,5 @@ module.exports = {
   displayGifteesForUser,
   displayDetailsForGiftee,
   createNewGiftee,
-  notesUpdated,
   addNewIdeaToList
 };

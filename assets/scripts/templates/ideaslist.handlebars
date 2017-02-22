@@ -1,13 +1,14 @@
 {{#each ideas as |idea|}}
 
   <div class="idea-selectable" data-id="{{idea.id}}">
-    <p>{{idea.title}}
+    <p class="idea-title-style">{{idea.title}} <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
       <ul>
         <li>{{idea.price}}</li>
         <li>{{idea.where}}</li>
         <li>{{idea.notes}}</li>
       </ul>
     </p>
+    <hr>
   </div>
 
 {{/each}}

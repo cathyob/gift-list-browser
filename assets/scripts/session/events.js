@@ -45,7 +45,7 @@ const onUpdateNotes = () => {
   notes.sizes = $('#notesSizesInput').val();
   notes.general = $('#notesGeneralInput').val();
 
-  console.log({"notes": notes});
+  // console.log({"notes": notes});
   api.updateNotes({"note": notes}, lastId)
     .then(ui.notesUpdated);
 };
@@ -60,7 +60,7 @@ const onAddIdea = () => {
   idea.notes = $('#ideasNotesInput').val();
 
   console.log({"idea": idea});
-  api.createNewIdea({"idea": idea})
+  api.createNewIdea(idea)
     .then(ui.addNewIdeaToList);
     $('.idea-title-taker').val("");
     $('.idea-where-taker').val("");
@@ -71,7 +71,7 @@ const onAddIdea = () => {
 const addHandlers = () => {
   $('#giftee-create').on('click', onCreateGiftee);
   $('#notes-update').on('click', onUpdateNotes);
-  //$('.giftee-ideas').on('submit', onAddIdea);
+  $('#idea-create').on('click', onAddIdea);
 };
 
 const startSession = () => {

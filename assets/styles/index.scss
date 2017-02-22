@@ -85,6 +85,11 @@ form {
   padding-right: $padding / 2 !important;
 }
 
+.giftee-name-style {
+  font-size: 16px;
+  font-weight: bolder;
+};
+
 // is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
 input {
   background-color: $lt-red;
@@ -170,6 +175,10 @@ hr {
   border-width: 1px 0;
   margin: $padding 0;
 }
+
+.idea-title-style {
+  font-weight: bolder;
+};
 
 .image-header {
   height: 50px;
