@@ -71,6 +71,14 @@ fieldset {
   color: $dk-grey;
 }
 
+.giftee-notes > fieldset {
+  background-color: $yellow;
+}
+
+.giftee-ideas > fieldset {
+  background-color: $yellow;
+}
+
 // padding to either side of the inputs in dropdown-menus
 form {
   padding-left: $padding / 2 !important;

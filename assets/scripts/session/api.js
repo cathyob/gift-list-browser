@@ -34,13 +34,25 @@ const createGiftee = function(data) {
   });
 };
 
-const updateNotes = function (id) {
+const updateNotes = function (data, id) {
   return $.ajax({
     url: config.apiOrigin + '/note/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
+    data,
+  });
+};
+
+const createNewIdea = function(data) {
+  return $.ajax({
+    url: config.apiOrigin + '/idea/',
+    method: 'POST',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
+    data
   });
 };
 
@@ -48,5 +60,6 @@ module.exports = {
   getGiftees,
   getGifteeDetails,
   createGiftee,
-  updateNotes
+  updateNotes,
+  createNewIdea
 };

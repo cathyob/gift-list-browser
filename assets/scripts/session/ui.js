@@ -20,9 +20,9 @@ const displayDetailsForGiftee = (data) => {
   $("#giftee-notes-here").removeClass('hidden');
   $("#giftee-ideas-here").removeClass('hidden');
   console.log(data);
-  $('#notesGeneralInput').val(data.notes.generalNotes);
-  $('#notesFavoritesInput').val(data.notes.favoritesNotes);
-  $('#notesSizesInput').val(data.notes.sizesNotes);
+  $('#notesGeneralInput').val(data.notes.general);
+  $('#notesFavoritesInput').val(data.notes.favorites);
+  $('#notesSizesInput').val(data.notes.sizes);
 
 // TODO: Style the ideaslist on the right column on the ideas (padding, size, etc), delete button, etc
   let html = ideasList({ideas: data.ideas});
@@ -36,13 +36,18 @@ const createNewGiftee = (data) => {
 };
 
 const notesUpdated = (data) => {
+  console.log('success!!!');
+};
+
+const addNewIdeaToList = (data) => {
   const events = require('../session/events.js');
-  displayDetailsForGiftee();
+  events.updateGifteeData(data.idea.giftee.id);
 };
 
 module.exports = {
   displayGifteesForUser,
   displayDetailsForGiftee,
   createNewGiftee,
-  notesUpdated
+  notesUpdated,
+  addNewIdeaToList
 };

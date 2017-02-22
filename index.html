@@ -121,6 +121,7 @@
           </div>
           <div class="notes-holder col-sm-4">
             <form class="form-inline giftee-notes hidden" id="giftee-notes-here">
+              <fieldset>
               <div class="form-group notes-favorites">
                 <label for="notesFavoritesInput"> Favorites</label>
                 <textarea class="form-control" id="notesFavoritesInput" placeholder="Brands, stores, foods, colors..." rows="5"></textarea>
@@ -133,33 +134,36 @@
                 <label for="notesGeneralInput">General</label>
                 <textarea class="form-control" id="notesGeneralInput" placeholder="Preferences, allergies..." rows="5"></textarea>
               </div>
-              <button type="submit" class="btn btn-default save-changes">Save Changes to Notes</button>
+              <button type="button" class="btn btn-default save-changes" id="notes-update">Save Changes to Notes</button>
+              </fieldset>
             </form>
           </div>
           <div class="ideas-holder col-sm-4">
             <div class="pending-ideas-holder">
             </div>
             <form class="form-inline giftee-ideas hidden" id="giftee-ideas-here">
+              <fieldset>
               <div class="form-group ideas-title">
                 <label for="ideasTitleInput"> Idea Title</label>
-                <textarea class="form-control" id="ideasTitleInput" placeholder="Blue Suede Shoes..." rows="2"></textarea>
+                <textarea class="form-control idea-title-taker" id="ideasTitleInput" placeholder="Blue Suede Shoes..." rows="2"></textarea>
               </div>
               <div class="form-group ideas-source">
                 <label for="ideasSourceInput">Source</label>
-                <textarea class="form-control" id="ideasSourceInput" placeholder="Where will you get it..." rows="2"></textarea>
+                <textarea class="form-control idea-where-taker" id="ideasSourceInput" placeholder="Where will you get it..." rows="2"></textarea>
               </div>
               <div class="form-group ideas-price">
                   <label for="ideasPriceInput">Amount (in dollars)</label>
                   <div class="input-group">
                     <div class="input-group-addon">$</div>
-                    <input type="text" class="form-control" id="ideasPriceInput" placeholder="Amount">
+                    <input type="text" class="form-control idea-price-taker" id="ideasPriceInput" placeholder="Amount">
                   </div>
                 </div>
               <div class="form-group ideas-notes">
                 <label for="ideasNotesInput">Notes</label>
-                <textarea class="form-control" id="ideasNotesInput" placeholder="They said they wanted this because..." rows="3"></textarea>
+                <textarea class="form-control idea-notes-taker" id="ideasNotesInput" placeholder="They said they wanted this because..." rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-default save-changes">Save New Gift Idea</button>
+              <button type="submit" class="btn btn-default save-changes" id="idea-create">Save New Gift Idea</button>
+              </fieldset>
             </form>
           </div>
         </div>
