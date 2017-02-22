@@ -3,9 +3,14 @@
 const store = require('../store');
 
 const signInSuccess = (data) => {
-  // these two remove text from input field when successfully submitted
+  // these remove text from input fields and messages when successfully submitted
   $('.email-sign-in').val("");
   $('.pass-sign-in').val("");
+  $('.email-sign-up').val("");
+  $('.password-sign-up').val("");
+  $('.password-confirmation-sign-up').val("");
+  $('.sign-in-message').text("");
+  $('.sign-up-message').text("");
   // hide the sign-in and sign-up forms once someone is logged in
   $('#waiting-options').hide();
 
@@ -22,7 +27,7 @@ const signInSuccess = (data) => {
 
 const signInFailure = (error) => {
   // this will show the password was invalid
-  $('.sign-in-error-message').text("Sorry, that username or password was incorrect");
+  $('.sign-in-message').text("Sorry, that username or password was incorrect");
 };
 
 const changePasswordSuccess = (data) => {
@@ -61,6 +66,10 @@ const signUpFailure = (error) => {
 };
 
 const signOutSuccess = (data) => {
+  // remove text from change password input fields and message when successfully signed out
+  $('.current-password-change').val("");
+  $('.new-password-change').val("");
+  $('.change-pw-message').text("");
   // reveal the sign-in and sign-up options once signed out
   $('#waiting-options').show();
   // hide the sign-out, change password, and who is logged in once user is

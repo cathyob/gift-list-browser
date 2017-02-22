@@ -182,14 +182,26 @@ footer {
 }
 
 
-
-.giftee-name-taker {
-  background-color: $lt-red;
-  border: 1px solid $dk-grey !important;
-  border-radius: 0;
-  color: $dk-grey;
-  padding: $padding / 2;
+// MESSAGE FONT WEIGHT
+.sign-up-message {
+  font-weight: bolder;
 }
+.sign-in-message {
+  font-weight: bolder;
+}
+.change-pw-message {
+  font-weight: bolder;
+}
+.sign-out-message {
+  font-weight: bolder;
+}
+
+.save-changes {
+  margin-top: $padding;
+  margin-bottom: $padding;
+}
+
+
 
 .giftee-name-taker {
   background-color: $lt-red;
