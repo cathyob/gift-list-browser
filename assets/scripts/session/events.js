@@ -53,15 +53,17 @@ const onUpdateNotes = () => {
 const onAddIdea = () => {
   console.log("bam")
   let idea = {};
-
+  idea.giftee_id = lastId;
   idea.title = $('#ideasTitleInput').val();
   idea.where = $('#ideasSourceInput').val();
   idea.price = $('#ideasPriceInput').val();
   idea.notes = $('#ideasNotesInput').val();
+  idea.status = 0;
 
   console.log({"idea": idea});
-  api.createNewIdea(idea)
+  api.createNewIdea({"idea":idea})
     .then(ui.addNewIdeaToList);
+
     $('.idea-title-taker').val("");
     $('.idea-where-taker').val("");
     $('.idea-price-taker').val("");

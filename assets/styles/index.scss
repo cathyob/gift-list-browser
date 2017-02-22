@@ -85,9 +85,15 @@ form {
   padding-right: $padding / 2 !important;
 }
 
+.giftee-selectable {
+  position: relative;
+}
+
 .giftee-name-style {
   font-size: 16px;
   font-weight: bolder;
+  padding: $padding / 2;
+  text-align: right;
 };
 
 // is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
@@ -176,13 +182,15 @@ hr {
   margin: $padding 0;
 }
 
-.idea-title-style {
+.idea-style {
   font-weight: bolder;
+  text-align: right;
 };
 
 .image-header {
   height: 50px;
-  width: 133px;
+  width: 93px;
+  padding: $padding / 2;
 }
 
 footer {
