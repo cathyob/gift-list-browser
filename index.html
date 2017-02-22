@@ -112,7 +112,7 @@
               <div class="input-group make-giftee-namer">
                 <input type="text" class="form-control giftee-name-taker" placeholder="Giftee name...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Create!</button>
+                  <button class="btn btn-default" type="button" id="giftee-create">Create!</button>
                 </span>
               </div>
             <div class="giftees-lister">
@@ -120,7 +120,7 @@
             </div>
           </div>
           <div class="notes-holder col-sm-4">
-            <form class="form-inline giftee-notes">
+            <form class="form-inline giftee-notes hidden" id="giftee-notes-here">
               <div class="form-group notes-favorites">
                 <label for="notesFavoritesInput"> Favorites</label>
                 <textarea class="form-control" id="notesFavoritesInput" placeholder="Brands, stores, foods, colors..." rows="5"></textarea>
@@ -139,7 +139,7 @@
           <div class="ideas-holder col-sm-4">
             <div class="pending-ideas-holder">
             </div>
-            <form class="form-inline ideas-title">
+            <form class="form-inline giftee-ideas hidden" id="giftee-ideas-here">
               <div class="form-group ideas-title">
                 <label for="ideasTitleInput"> Idea Title</label>
                 <textarea class="form-control" id="ideasTitleInput" placeholder="Blue Suede Shoes..." rows="2"></textarea>

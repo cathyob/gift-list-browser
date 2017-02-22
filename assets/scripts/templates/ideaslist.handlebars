@@ -1,7 +1,13 @@
 {{#each ideas as |idea|}}
 
-  <div>
-    <p>{{idea.title}}</p>
+  <div class="idea-selectable" data-id="{{idea.id}}">
+    <p>{{idea.title}}
+      <ul>
+        <li>{{idea.price}}</li>
+        <li>{{idea.where}}</li>
+        <li>{{idea.notes}}</li>
+      </ul>
+    </p>
   </div>
 
 {{/each}}
