@@ -1,7 +1,7 @@
 # Thank you for checking out my app!
 
 ## Take a look under the hood of the API here:
-![alt text](https://github.com/cathyob/gift-list-api "backend")
+https://github.com/cathyob/gift-list-api
 
 ## About
 This app was inspired by my own forgetfulness! When I found something I thought would work as a gift for someone I would save a link as a bookmark or email it to myself. Then eventually, after the occasion the gift was for came and went, I would see the idea again and realize I had forgotten all about it!
@@ -37,8 +37,8 @@ In the future I plan to come back to the Ideas section and allowing them to be r
 
 ## Wireframe
 My initial design was:
-![alt text](https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg "wireframe")
+https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg
 
 
 # Take a look and try it out here:
-![alt text](https://cathyob.github.io/gift-list-browser/ "Gifter")
+https://cathyob.github.io/gift-list-browser/
