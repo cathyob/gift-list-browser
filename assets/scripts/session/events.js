@@ -70,6 +70,8 @@ const addHandlers = () => {
   $('#giftee-create').on('click', onCreateGiftee);
   $('#notes-update').on('click', onUpdateNotes);
   $('#idea-create').on('click', onAddIdea);
+
+  lastId = 0;
 };
 
 const deleteGiftee = (id) => {
