@@ -18,6 +18,7 @@ The Ideas area includes the list of any ideas you've created for them and the fo
 In the future I plan to come back to the Ideas section and allowing them to be removed.
 
 ## User Stories
+As I planned this app I initially listed the following criteria to meet the needs I was envisioning this app could fulfill.
 * As a user, I want to be able to [Sign Up] in order to create my unique profile
 * As a user, I want to be able to [Sign In] in order to access my unique profile
 * As a user, I want to be able to [Change Password] in order to update my password
