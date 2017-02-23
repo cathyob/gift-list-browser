@@ -1,11 +1,13 @@
+<p class="idea-label">Ideas</p>
+
 {{#each ideas as |idea|}}
 
   <div class="idea-selectable" data-id="{{idea.id}}">
-    <p class="idea-style">{{idea.title}} <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    <p class="idea-style">{{idea.title}}
       <ul>
-        <li>{{idea.price}}</li>
-        <li>{{idea.where}}</li>
-        <li>{{idea.notes}}</li>
+        <li>Price: {{idea.price}}</li>
+        <li>Source: {{idea.where}}</li>
+        <li>Notes: {{idea.notes}}</li>
       </ul>
     </p>
     <hr>

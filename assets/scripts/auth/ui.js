@@ -86,7 +86,24 @@ const signOutSuccess = (data) => {
   // reveals please sign in message and waiting image once signed out
   $("#waiting-on-user").removeClass('hidden');
   $('.waiting').show();
-  // clear and hide the notes and ideas list
+  // clear and hide the ideas list
+  $('#notesFavoritesInput').val("");
+  $('#notesSizesInput').val("");
+  $('#notesGeneralInput').val("");
+  $("#giftee-notes-here").removeClass('hidden');
+  $("#giftee-notes-here").addClass('hidden');
+  $('.idea-message').text("");
+  $('.idea-message').removeClass('hidden');
+  $('.idea-message').addClass('hidden');
+  // clear and hide the notes
+  $('#ideasTitleInput').val("");
+  $('#ideasPriceInput').val("");
+  $('#ideasSourceInput').val("");
+  $('#ideasNotesInput').val("");
+  $("#giftee-ideas-here").removeClass('hidden');
+  $("#giftee-ideas-here").addClass('hidden');
+  $('.pending-ideas-holder').empty();
+
 };
 
 const signOutFailure = (error) => {

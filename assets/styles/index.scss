@@ -183,7 +183,6 @@ hr {
 
 .idea-style {
   font-weight: bolder;
-  text-align: right;
 };
 
 .image-header {
@@ -251,22 +250,12 @@ footer {
   float: right;
 }
 
-// .make-giftee-namer > button {
-//   background-color: $lt-red !important;
-//   border: 1px solid $dk-grey !important;
-//   border-radius: 0;
-//   color: $dk-grey !important;
-//   margin: 0 !important;
-//   width: 150px;
-//   // -webkit-transition-duration: .2s;
-//   // transition-duration: .2s;
-// }
-//
-// .make-giftee-button > form {
-//   width: 150px;
-//   padding: $padding /2 !important;
-// }
-//
-// .make-giftee-button > input {
-//   width: 100px;
-// }
+.idea-label {
+  font-weight: bolder;
+};
+
+.idea-message {
+  font-weight: bolder;
+  margin: 0;
+  padding-top: $padding / 2;
+};

@@ -24,7 +24,6 @@ const displayGifteesForUser = (data) => {
 const displayDetailsForGiftee = (data) => {
   $("#giftee-notes-here").removeClass('hidden');
   $("#giftee-ideas-here").removeClass('hidden');
-  // console.log(data);
   $('#notesGeneralInput').val(data.notes.general);
   $('#notesFavoritesInput').val(data.notes.favorites);
   $('#notesSizesInput').val(data.notes.sizes);
@@ -42,11 +41,24 @@ const createNewGiftee = (data) => {
 const addNewIdeaToList = (data) => {
   const events = require('../session/events.js');
   events.updateGifteeData(data.idea.giftee.id);
+  $('.idea-message').text("");
+  $('.idea-message').removeClass('hidden');
+  $('.idea-message').addClass('hidden');
+  $('.idea-title-taker').val("");
+  $('.idea-where-taker').val("");
+  $('.idea-price-taker').val("");
+  $('.idea-notes-taker').val("");
 };
+
+const addNewIdeaFail = () => {
+  $('.idea-message').removeClass('hidden');
+  $('.idea-message').text("Sorry, Your idea must have a title");
+}
 
 module.exports = {
   displayGifteesForUser,
   displayDetailsForGiftee,
   createNewGiftee,
-  addNewIdeaToList
+  addNewIdeaToList,
+  addNewIdeaFail
 };

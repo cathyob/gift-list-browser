@@ -45,13 +45,11 @@ const onUpdateNotes = () => {
   notes.sizes = $('#notesSizesInput').val();
   notes.general = $('#notesGeneralInput').val();
 
-  // console.log({"notes": notes});
   api.updateNotes({"note": notes}, lastId)
     .then(ui.notesUpdated);
 };
 
 const onAddIdea = () => {
-  console.log("bam")
   let idea = {};
   idea.giftee_id = lastId;
   idea.title = $('#ideasTitleInput').val();
@@ -60,14 +58,9 @@ const onAddIdea = () => {
   idea.notes = $('#ideasNotesInput').val();
   idea.status = 0;
 
-  console.log({"idea": idea});
   api.createNewIdea({"idea":idea})
-    .then(ui.addNewIdeaToList);
-
-    $('.idea-title-taker').val("");
-    $('.idea-where-taker').val("");
-    $('.idea-price-taker').val("");
-    $('.idea-notes-taker').val("");
+    .then(ui.addNewIdeaToList)
+    .catch(ui.addNewIdeaFail);
 };
 
 const addHandlers = () => {
