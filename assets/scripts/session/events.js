@@ -64,6 +64,9 @@ const onAddIdea = () => {
 };
 
 const addHandlers = () => {
+  $('#giftee-create').off('click', onCreateGiftee);
+  $('#notes-update').off('click', onUpdateNotes);
+  $('#idea-create').off('click', onAddIdea);
   $('#giftee-create').on('click', onCreateGiftee);
   $('#notes-update').on('click', onUpdateNotes);
   $('#idea-create').on('click', onAddIdea);
