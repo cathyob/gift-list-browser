@@ -22,6 +22,15 @@ const displayGifteesForUser = (data) => {
 };
 
 const displayDetailsForGiftee = (data) => {
+  // clear and hide the ideas list
+  $('#ideasTitleInput').val("");
+  $('#ideasPriceInput').val("");
+  $('#ideasSourceInput').val("");
+  $('#ideasNotesInput').val("");
+  $('.idea-message').text("");
+  $('.idea-message').removeClass('hidden');
+  $('.idea-message').addClass('hidden');
+  // clear notes
   $("#giftee-notes-here").removeClass('hidden');
   $("#giftee-ideas-here").removeClass('hidden');
   $('#notesGeneralInput').val(data.notes.general);
