@@ -56,10 +56,21 @@ const createNewIdea = function(data) {
   });
 };
 
+const deleteSelectedGiftee = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/giftee/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    }
+  });
+};
+
 module.exports = {
   getGiftees,
   getGifteeDetails,
   createGiftee,
   updateNotes,
-  createNewIdea
+  createNewIdea,
+  deleteSelectedGiftee
 };

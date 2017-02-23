@@ -24,6 +24,7 @@ const signInSuccess = (data) => {
   $('.logged-in-name').text(store.user.email);
 
   // hides waiting image and please sign in message once logged in
+  $("#waiting-on-user").removeClass('hidden');
   $("#waiting-on-user").addClass('hidden');
   // displays giftee contenet sign in is successfull
   // $("#user-logged-in").removeClass('hidden');
@@ -77,12 +78,15 @@ const signOutSuccess = (data) => {
   // reveal the sign-in and sign-up options once signed out
   $('#waiting-options').show();
   // hide the sign-out, change password, and who is logged in once user is
+  $("#logged-in-options").removeClass('hidden');
+  $("#user-logged-in").removeClass('hidden');
   $("#logged-in-options").addClass('hidden');
   $("#user-logged-in").addClass('hidden');
   $('.logged-in-name').text("");
   // reveals please sign in message and waiting image once signed out
   $("#waiting-on-user").removeClass('hidden');
   $('.waiting').show();
+  // clear and hide the notes and ideas list
 };
 
 const signOutFailure = (error) => {

@@ -76,6 +76,20 @@ const addHandlers = () => {
   $('#idea-create').on('click', onAddIdea);
 };
 
+const deleteGiftee = (id) => {
+
+  if(id === lastId) {
+    $("#giftee-notes-here").removeClass('hidden');
+    $("#giftee-ideas-here").removeClass('hidden');
+    $("#giftee-notes-here").addClass('hidden');
+    $("#giftee-ideas-here").addClass('hidden');
+    $('.pending-ideas-holder').empty();
+  }
+
+  api.deleteSelectedGiftee(id)
+    .then(getGifteesForUser);
+};
+
 const startSession = () => {
   addHandlers();
   getGifteesForUser();
@@ -88,5 +102,6 @@ module.exports = {
   updateGifteeData,
   getGifteesForUser,
   onUpdateNotes,
-  onAddIdea
+  onAddIdea,
+  deleteGiftee
 };

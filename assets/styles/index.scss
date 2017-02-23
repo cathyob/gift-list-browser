@@ -93,7 +93,6 @@ form {
   font-size: 16px;
   font-weight: bolder;
   padding: $padding / 2;
-  text-align: right;
 };
 
 // is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
@@ -240,6 +239,16 @@ footer {
 
 .giftee-selectable {
   margin-left: $padding;
+  width:75%;
+  text-align: left;
+  float: left;
+}
+
+.giftee-trash-icon {
+  margin-top: 8px;
+  width:18%;
+  text-align: center;
+  float: right;
 }
 
 // .make-giftee-namer > button {

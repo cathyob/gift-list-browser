@@ -14,6 +14,11 @@ const displayGifteesForUser = (data) => {
       let id = this.getAttribute('data-id');
       events.selectedGiftee(id)
   });
+
+  $('.trash-giftee').click(function() {
+      let id = this.getAttribute('data-id');
+      events.deleteGiftee(id)
+  });
 };
 
 const displayDetailsForGiftee = (data) => {
@@ -24,7 +29,6 @@ const displayDetailsForGiftee = (data) => {
   $('#notesFavoritesInput').val(data.notes.favorites);
   $('#notesSizesInput').val(data.notes.sizes);
 
-// TODO: Style the ideaslist on the right column on the ideas (padding, size, etc), delete button, etc
   let html = ideasList({ideas: data.ideas});
   $('.pending-ideas-holder').empty();
   $('.pending-ideas-holder').append(html);

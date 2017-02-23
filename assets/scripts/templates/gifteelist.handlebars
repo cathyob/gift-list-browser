@@ -1,7 +1,12 @@
 {{#each people as |person|}}
 
-  <div class="giftee-selectable" data-id="{{person.id}}">
-    <p class="giftee-name-style">{{person.name}} <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></p>
+  <div>
+    <div class="giftee-selectable" data-id="{{person.id}}">
+      <p class="giftee-name-style">{{person.name}}</p>
+    </div>
+    <div class="giftee-trash-icon trash-giftee" data-id="{{person.id}}">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    </div>
   </div>
 
 {{/each}}
