@@ -37,7 +37,7 @@ In the future I plan to come back to the Ideas section and allowing them to be r
 
 ## Wireframe
 My initial design was:
-![alt text](https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg "wirefram")
+![alt text](https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg "wireframe")
 
 
 ## Take a look and try it out here:
