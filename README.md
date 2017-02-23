@@ -37,8 +37,8 @@ In the future I plan to come back to the Ideas section and allowing them to be r
 
 ## Wireframe
 My initial design was:
-https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg
+![alt text](https://raw.githubusercontent.com/cathyob/full-stack-project-practice/response/wireframe.jpg "wirefram")
 
 
-# Take a look and try it out here:
+## Take a look and try it out here:
 https://cathyob.github.io/gift-list-browser/
