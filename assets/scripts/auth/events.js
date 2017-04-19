@@ -24,9 +24,16 @@ const onSignUp = function (event) {
 
   let data = getFormFields(event.target);
 
-  api.signUp(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure);
+  if (data.credentials.password === data.credentials.password_confirmation) {
+    api.signUp(data)
+      .then(() => {
+        onSignIn(event, data);
+      })
+      .then(ui.signUpSuccess)
+      .catch(ui.signUpFailure);
+  } else {
+    ui.signUpFailure();
+  }
 };
 
 const onChangePassword = function (event) {

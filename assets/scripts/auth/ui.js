@@ -62,9 +62,9 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = (error) => {
   // this removes text from input field when unsuccessfully submitted
-  $('.email-sign-up').val("");
-  $('.password-sign-up').val("");
-  $('.password-confirmation-sign-up').val("");
+  // $('.email-sign-up').val("");
+  // $('.password-sign-up').val("");
+  // $('.password-confirmation-sign-up').val("");
   // this will show the password was invalid
   $("#user-status").removeClass('hidden');
   $('.sign-up-message').text("Sorry, that username has been used or your passwords did not match.");
