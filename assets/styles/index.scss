@@ -197,6 +197,11 @@ footer {
   width: 100%; // keeps it the width of the page
 }
 
+.portfolio-link {
+  color: $dk-grey;
+  text-decoration: underline;
+}
+
 .sign-out-button {
   float: right;
 }
