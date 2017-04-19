@@ -13,8 +13,9 @@ body {
 }
 
 .body-active-user {
-  width: 100%;
   margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .btn {
@@ -44,13 +45,6 @@ body {
   margin-right: $padding;
 }
 
-.content-holder {
-  margin: auto;
-  max-width: 675px;
-  padding-top: 32px;
-  margin-bottom: 32px;
-}
-
 // is the actual button (not the dropdown part)
 .dropdown-toggle {
   background-color: $lt-red;
@@ -66,6 +60,27 @@ body {
   color: $dk-grey;
 }
 
+// MESSAGE FONT WEIGHT
+.sign-up-message {
+  font-weight: bolder;
+}
+.sign-in-message {
+  font-weight: bolder;
+}
+.change-pw-message {
+  font-weight: bolder;
+}
+.sign-out-message {
+  font-weight: bolder;
+}
+
+.content-holder {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  max-width: 675px;
+  padding-top: 32px;
+}
+
 // middle of dropdown menu background/font
 fieldset {
   background-color: $lt-red;
@@ -78,6 +93,21 @@ fieldset {
 
 .giftee-ideas > fieldset {
   background-color: $yellow;
+}
+
+footer {
+  text-align: center;
+  background-color: $yellow;
+  bottom: 0; // fixed position at the bottom of the scren
+  clear: both;
+  color: $dk-grey;
+  position: fixed; // uses the bottom location
+  width: 100%; // keeps it the width of the page
+}
+
+.portfolio-link {
+  color: $dk-grey;
+  text-decoration: underline;
 }
 
 // padding to either side of the inputs in dropdown-menus
@@ -96,73 +126,10 @@ form {
   padding: $padding / 2;
 };
 
-// is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
-input {
-  background-color: $lt-red;
-  border: 1px solid $dk-grey;
-  color: $dk-grey;
-  float: right;
-}
-
-@media (min-width: 769px) {
-  .giftees-holder {
-    background-color: $lt-red;
-    // float: left;
-    height: 500px;
-    padding: 0;
-    max-width: 175px;
-    overflow-y: scroll;
-  }
-
-  .notes-holder {
-    background-color: $yellow;
-    // float: left;
-    height: 500px;
-    max-width: 250px;
-    overflow-y: scroll;
-    border-left: 1px solid $dk-grey;
-    border-right: 1px solid $dk-grey;
-  }
-
-  .ideas-holder {
-    background-color: $yellow;
-    // float: left;
-    height: 500px;
-    max-width: 250px;
-    overflow-y: scroll;
-  }
-}
-
-@media (max-width: 768px){
-  .giftees-holder {
-    background-color: $lt-red;
-    // float: left;
-    height: 120px;
-    overflow-y: scroll;
-  }
-
-  .notes-holder {
-    background-color: $yellow;
-    border-top: 1px solid $dk-grey;
-    border-bottom: 1px solid $dk-grey;
-    // float: left;
-    height: 250px;
-    overflow-y: scroll;
-  }
-
-  .ideas-holder {
-    background-color: $yellow;
-    // float: left;
-    height: 250px;
-    overflow-y: scroll;
-  }
-}
-
 .header {
   background-color: $yellow;
   height: 50px;
   width: 100%;
-  // padding: 8px;
 }
 
 hr {
@@ -177,9 +144,67 @@ hr {
   margin: $padding 0;
 }
 
+.loading-image {
+  text-align: center;
+  max-width: 100%;
+}
+
+// is the input text fields and buttons (e.g. email, password, "sign in" button inside dropdown menu)
+input {
+  background-color: $lt-red;
+  border: 1px solid $dk-grey;
+  color: $dk-grey;
+  float: right;
+}
+
+.giftees-holder {
+  background-color: $lt-red;
+  float: left;
+  height: 500px;
+  padding: 0;
+  width: 175px;
+  overflow-y: scroll;
+}
+
+.notes-holder {
+  background-color: $yellow;
+  float: left;
+  height: 500px;
+  margin-left: 10px;
+  overflow-y: scroll;
+  width: 240px;
+
+}
+
+.form-control {
+  width: 230px !important;
+}
+
+.form-group {
+  margin-bottom: 15px !important;
+}
+
+.idea-price-taker {
+ width: 197px !important;
+}
+
+.ideas-holder {
+  background-color: $yellow;
+  float: left;
+  height: 500px;
+  overflow-y: scroll;
+  margin-left: 10px;
+  width: 240px;
+}
+
 .idea-style {
   font-weight: bolder;
 };
+
+.pending-ideas-holder {
+  padding-left: $padding / 2 !important;
+  padding-right: $padding / 2 !important;
+}
 
 .image-header {
   height: 50px;
@@ -187,38 +212,8 @@ hr {
   padding: $padding / 2;
 }
 
-footer {
-  text-align: center;
-  background-color: $yellow;
-  bottom: 0; // fixed position at the bottom of the scren
-  clear: both;
-  color: $dk-grey;
-  position: fixed; // uses the bottom location
-  width: 100%; // keeps it the width of the page
-}
-
-.portfolio-link {
-  color: $dk-grey;
-  text-decoration: underline;
-}
-
 .sign-out-button {
   float: right;
-}
-
-
-// MESSAGE FONT WEIGHT
-.sign-up-message {
-  font-weight: bolder;
-}
-.sign-in-message {
-  font-weight: bolder;
-}
-.change-pw-message {
-  font-weight: bolder;
-}
-.sign-out-message {
-  font-weight: bolder;
 }
 
 .save-changes {
@@ -226,16 +221,19 @@ footer {
   margin-bottom: $padding;
 }
 
-
-
 .giftee-name-taker {
   background-color: $lt-red;
   border: 1px solid $dk-grey !important;
   border-radius: 0;
   color: $dk-grey;
   padding: $padding / 2;
+  width: 103px !important;
 }
 
+.giftee-name-button {
+  height: 34px;
+  width: 72px;
+}
 
 .giftee-selectable {
   margin-left: $padding;
@@ -260,3 +258,41 @@ footer {
   margin: 0;
   padding-top: $padding / 2;
 };
+
+@media (max-width: 705px){
+  .content-holder {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    width: 300px;
+    padding-top: 32px;
+  }
+
+  .giftees-holder {
+    height: 120px;
+    width: 300px;
+  }
+
+  .form-control {
+    width: 290px !important;
+  }
+
+  .giftee-name-taker {
+    width: 228px !important;
+  }
+
+  .idea-price-taker {
+   width: 257px !important;
+  }
+
+  .notes-holder {
+    border-left: 1px solid $yellow;
+    border-right: 1px solid $yellow;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  .ideas-holder {
+    margin-bottom: 29px;
+    width: 300px;
+  }
+}
