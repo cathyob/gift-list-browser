@@ -14,7 +14,7 @@
     </head>
     <body>
       <div class="header">
-        <img src="https://raw.githubusercontent.com/cathyob/gift-list-browser/master/assets/Logo.png" alt="Gifter" class="image-header"/>
+        <img src="https://raw.githubusercontent.com/cathyob/gift-list-browser/master/assets/LogoAngled.png" alt="Gifter" class="image-header"/>
         <div class="button-holder" id="waiting-options">
           <div class="btn-group"> <!-- SIGN IN-->
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -25,17 +25,17 @@
                   <div class="input">
                     <label class="email">
                     Username
-                    <input class="email-sign-in" type="text" name="credentials[email]">
+                    <input class="email-sign-in user-auth-input" type="text" name="credentials[email]">
                   </label>
                 </div>
                   <div class="input">
                     <label class="password">
                     Password
-                    <input class="pass-sign-in" type="password" name="credentials[password]">
+                    <input class="pass-sign-in user-auth-input" type="password" name="credentials[password]">
                   </label>
                 </div>
                   <p class="sign-in-message"></p>
-                  <input class="close-dropdown" type="submit" name="submit" value="Sign in!">
+                  <input class="close-dropdown user-auth-input" type="submit" name="submit" value="Sign in!">
               </fieldset>
             </form>
           </div>
@@ -48,24 +48,24 @@
                 <div class="input">
                   <label class="email">
                   Username
-                  <input class="email-sign-up"
+                  <input class="email-sign-up user-auth-input"
                   type="text" name="credentials[email]">
                   </label>
                 </div>
                 <div class="input">
                   <label class="password">
                   Password
-                  <input class="password-sign-up" type="password" name="credentials[password]">
+                  <input class="password-sign-up user-auth-input" type="password" name="credentials[password]">
                   </label>
                 </div>
                 <div class="input">
                   <label class="password_confirmation">
                   Password Confirmation
-                  <input class="password-confirmation-sign-up" type="password" name="credentials[password_confirmation]">
+                  <input class="password-confirmation-sign-up user-auth-input" type="password" name="credentials[password_confirmation]">
                   </label>
                 </div>
                   <p class="sign-up-message"></p>
-                <input class="close-dropdown" type="submit" name="submit" value="Sign up!">
+                <input class="close-dropdown user-auth-input" type="submit" name="submit" value="Sign up!">
               </fieldset>
             </form>
           </div>
@@ -79,17 +79,17 @@
                   <div class="input">
                     <label>
                     Current Password
-                    <input class="current-password-change" type="password" name="passwords[old]">
+                    <input class="current-password-change user-auth-input" type="password" name="passwords[old]">
                   </label>
                 </div>
                   <div class="input">
                     <label>
                     New Password
-                    <input class="new-password-change" type="password" name="passwords[new]">
+                    <input class="new-password-change user-auth-input" type="password" name="passwords[new]">
                   </label>
                 </div>
                   <p class="change-pw-message"></p>
-                  <input class="close-dropdown" type="submit" name="submit" value="Change Password!">
+                  <input class="close-dropdown user-auth-input" type="submit" name="submit" value="Change Password!">
                 </fieldset>
                 <hr>
                 <p class="sign-out-message"></p>
@@ -108,7 +108,7 @@
           <div class="giftees-holder">
             <!-- MAKE GIFTEE INPUT + BUTTON-->
               <div class="input-group make-giftee-namer">
-                <input type="text" class="form-control giftee-name-taker" placeholder="Giftee name...">
+                <input type="text" class="form-control giftee-name-taker" id="giftee-name-taker" placeholder="Giftee name...">
                 <span class="input-group-btn">
                   <button class="btn btn-default giftee-name-button" type="button" id="giftee-create">Create!</button>
                 </span>
@@ -132,6 +132,7 @@
                 <label for="notesGeneralInput">General</label>
                 <textarea class="form-control" id="notesGeneralInput" placeholder="Preferences, allergies..." rows="5"></textarea>
               </div>
+              <p class="notes-message hidden" id="notes-message"></p>
               <button type="button" class="btn btn-default save-changes" id="notes-update">Save Changes to Notes</button>
               </fieldset>
             </form>
@@ -160,7 +161,7 @@
                 <label for="ideasNotesInput">Notes</label>
                 <textarea class="form-control idea-notes-taker" id="ideasNotesInput" placeholder="They said they wanted this because..." rows="3"></textarea>
               </div>
-              <p class="idea-message hidden"></p>
+              <p class="idea-message hidden" id="idea-message"></p>
               <button type="button" class="btn btn-default save-changes" id="idea-create">Save New Gift Idea</button>
               </fieldset>
             </form>

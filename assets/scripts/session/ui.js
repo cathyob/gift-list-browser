@@ -4,7 +4,10 @@
 const gifteeList = require ('../templates/gifteelist.handlebars');
 const ideasList = require('../templates/ideaslist.handlebars');
 
+let currentGiftee = null
+
 const displayGifteesForUser = (data) => {
+  currentGiftee = null // added due to displayDetailsForGiftee
   const events = require('../session/events.js');
   $('.giftees-lister').empty();
   let html = gifteeList({people: data.giftees});
@@ -22,6 +25,13 @@ const displayGifteesForUser = (data) => {
 };
 
 const displayDetailsForGiftee = (data) => {
+  // added if to address how addNewIdeaToList idea-message was removed immediately by updateGifteeData > displayDetailsForGiftee //
+
+  if (currentGiftee === data.notes.giftee_id) {
+    return
+  }
+  currentGiftee = data.notes.giftee_id
+
   // clear and hide the ideas list
   $('#ideasTitleInput').val("");
   $('#ideasPriceInput').val("");
@@ -47,27 +57,53 @@ const createNewGiftee = (data) => {
   events.getGifteesForUser();
 };
 
+
 const addNewIdeaToList = (data) => {
   const events = require('../session/events.js');
   events.updateGifteeData(data.idea.giftee.id);
-  $('.idea-message').text("");
-  $('.idea-message').removeClass('hidden');
-  $('.idea-message').addClass('hidden');
   $('.idea-title-taker').val("");
   $('.idea-where-taker').val("");
   $('.idea-price-taker').val("");
   $('.idea-notes-taker').val("");
+  $('#idea-message').removeClass('hidden');
+  $('.idea-message').text("Your idea was saved!");
+  setTimeout(function() {
+      $('#idea-message').addClass('hidden');
+      $('.idea-message').text("");
+  }, 5000);
 };
 
 const addNewIdeaFail = () => {
-  $('.idea-message').removeClass('hidden');
-  $('.idea-message').text("Sorry, Your idea must have a title");
-}
+  $('#idea-message').removeClass('hidden');
+  $('.idea-message').text("Sorry, your idea must have a title");
+  setTimeout(function() {
+      $('#idea-message').addClass('hidden');
+      $('.idea-message').text("");
+  }, 5000);
+};
+
+const notesUpdated = (notes) => {
+  $('#notes-message').removeClass('hidden');
+  $('.notes-message').text("Your notes were updated!");
+  setTimeout(function() {
+      $('#notes-message').addClass('hidden');
+  }, 5000);
+};
+
+const notesNotUpdated = (notes) => {
+  $('#notes-message').removeClass('hidden');
+  $('.notes-message').text("Your notes were not updated, please try again later.");
+  setTimeout(function() {
+      $('#notes-message').addClass('hidden');
+  }, 5000);
+};
 
 module.exports = {
   displayGifteesForUser,
   displayDetailsForGiftee,
   createNewGiftee,
   addNewIdeaToList,
-  addNewIdeaFail
+  addNewIdeaFail,
+  notesUpdated,
+  notesNotUpdated
 };

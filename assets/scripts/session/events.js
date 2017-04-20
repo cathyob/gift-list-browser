@@ -46,7 +46,8 @@ const onUpdateNotes = () => {
   notes.general = $('#notesGeneralInput').val();
 
   api.updateNotes({"note": notes}, lastId)
-    .then(ui.notesUpdated);
+    .then(ui.notesUpdated)
+    .catch(ui.notesNotUpdated);
 };
 
 const onAddIdea = () => {
