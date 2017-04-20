@@ -1,15 +1,15 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$yellow: #ffff76; // title background
-$cyan: #02d8ea; // body background
+$yellow: #fcfc96; // title background
+$cyan: #95dfe6; // body background
 $dk-grey: #363636;
-$lt-red: #ff8660;
+$lt-red: #f08968;
 
 $padding: 8px;
 
 body {
-  background-color: $cyan;
+  background-color: white;
 }
 
 .body-active-user {
@@ -28,13 +28,13 @@ body {
 }
 
 .btn:hover {
-  background-color: $lt-red !important;
+  background-color: $yellow !important;
   border: 1px solid $dk-grey !important;
   color: $dk-grey !important;
 }
 
 .btn:active {
-  background-color: $lt-red !important;
+  background-color: $yellow !important;
   border: 1px solid $dk-grey  !important;
   color: $dk-grey  !important;
 }
@@ -55,9 +55,23 @@ body {
 
 // background top and bottom of button dropdowns
 .dropdown-menu {
-  background-color: $lt-red;
+  background-color: $cyan;
   border-radius: 0;
   color: $dk-grey;
+}
+
+// middle of dropdown menu background/font
+fieldset {
+  background-color: $cyan;
+  color: $dk-grey;
+}
+
+.giftee-notes > fieldset {
+  background-color: $cyan;
+}
+
+.giftee-ideas > fieldset {
+  background-color: $cyan;
 }
 
 // MESSAGE FONT WEIGHT
@@ -81,33 +95,8 @@ body {
   padding-top: 32px;
 }
 
-// middle of dropdown menu background/font
-fieldset {
-  background-color: $lt-red;
-  color: $dk-grey;
-}
-
-.giftee-notes > fieldset {
-  background-color: $yellow;
-}
-
-.giftee-ideas > fieldset {
-  background-color: $yellow;
-}
-
-footer {
-  text-align: center;
-  background-color: $yellow;
-  bottom: 0; // fixed position at the bottom of the scren
-  clear: both;
-  color: $dk-grey;
-  position: fixed; // uses the bottom location
-  width: 100%; // keeps it the width of the page
-}
-
-.portfolio-link {
-  color: $dk-grey;
-  text-decoration: underline;
+.user-auth-input {
+  background-color: white;
 }
 
 // padding to either side of the inputs in dropdown-menus
@@ -127,7 +116,7 @@ form {
 };
 
 .header {
-  background-color: $yellow;
+  background-color: $lt-red;
   height: 50px;
   width: 100%;
 }
@@ -167,13 +156,18 @@ input {
 }
 
 .notes-holder {
-  background-color: $yellow;
+  background-color: $cyan;
   float: left;
   height: 500px;
   margin-left: 10px;
   overflow-y: scroll;
   width: 240px;
+}
 
+.notes-message,
+.idea-message {
+  color: $lt-red;
+  font-weight: bold;
 }
 
 .form-control {
@@ -181,7 +175,7 @@ input {
 }
 
 .form-group {
-  margin-bottom: 15px !important;
+  margin-bottom: 8px !important;
 }
 
 .idea-price-taker {
@@ -189,7 +183,7 @@ input {
 }
 
 .ideas-holder {
-  background-color: $yellow;
+  background-color: $cyan;
   float: left;
   height: 500px;
   overflow-y: scroll;
@@ -222,7 +216,7 @@ input {
 }
 
 .giftee-name-taker {
-  background-color: $lt-red;
+  background-color: white;
   border: 1px solid $dk-grey !important;
   border-radius: 0;
   color: $dk-grey;
@@ -259,6 +253,21 @@ input {
   padding-top: $padding / 2;
 };
 
+footer {
+  text-align: center;
+  background-color: $lt-red;
+  bottom: 0; // fixed position at the bottom of the scren
+  clear: both;
+  color: $dk-grey;
+  position: fixed; // uses the bottom location
+  width: 100%; // keeps it the width of the page
+}
+
+.portfolio-link {
+  color: $dk-grey;
+  text-decoration: underline;
+}
+
 @media (max-width: 705px){
   .content-holder {
     margin: 0 auto;
@@ -285,14 +294,15 @@ input {
   }
 
   .notes-holder {
-    border-left: 1px solid $yellow;
-    border-right: 1px solid $yellow;
+    border-left: 1px solid $cyan;
+    border-right: 1px solid $cyan;
     margin: 10px 0;
     width: 300px;
   }
 
   .ideas-holder {
     margin-bottom: 29px;
+    margin-left: 0;
     width: 300px;
   }
 }
