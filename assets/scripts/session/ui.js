@@ -25,21 +25,24 @@ const displayGifteesForUser = (data) => {
 };
 
 const displayDetailsForGiftee = (data) => {
-  // added if to address how addNewIdeaToList idea-message was removed immediately by updateGifteeData > displayDetailsForGiftee //
+  // added/updated if to address how addNewIdeaToList idea-message was removed immediately by updateGifteeData > displayDetailsForGiftee //
+  // if the giftee is not the same (e.g. user selects new giftee within 5 seconds of saving an idea on the prior giftee) then clear the idea-message and hide it
+  // if the giftee is the same, just clear the values of all notes/idea inputs
+  // TODO amend functionality so notes updates only clears notes and idea updates only clears ideas TODO //
 
-  if (currentGiftee === data.notes.giftee_id) {
-    return
+  if (currentGiftee !== data.notes.giftee_id) {
+   $('.idea-message').text("");
+   $('.idea-message').removeClass('hidden');
+   $('.idea-message').addClass('hidden');
   }
-  currentGiftee = data.notes.giftee_id
+
+  currentGiftee = data.notes.giftee_id;
 
   // clear and hide the ideas list
   $('#ideasTitleInput').val("");
   $('#ideasPriceInput').val("");
   $('#ideasSourceInput').val("");
   $('#ideasNotesInput').val("");
-  $('.idea-message').text("");
-  $('.idea-message').removeClass('hidden');
-  $('.idea-message').addClass('hidden');
   // clear notes
   $("#giftee-notes-here").removeClass('hidden');
   $("#giftee-ideas-here").removeClass('hidden');
