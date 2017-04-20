@@ -86,6 +86,8 @@ const signOutSuccess = (data) => {
   // reveals please sign in message and waiting image once signed out
   $("#waiting-on-user").removeClass('hidden');
   $('.waiting').show();
+  // empties giftee name on sign-out
+  $('#giftee-name-taker').val("");
   // clear and hide the ideas list
   $('#ideasTitleInput').val("");
   $('#ideasPriceInput').val("");
@@ -103,7 +105,6 @@ const signOutSuccess = (data) => {
   $("#giftee-ideas-here").removeClass('hidden');
   $("#giftee-ideas-here").addClass('hidden');
   $('.pending-ideas-holder').empty();
-
 };
 
 const signOutFailure = (error) => {
