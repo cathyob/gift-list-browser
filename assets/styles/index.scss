@@ -263,8 +263,13 @@ footer {
   width: 100%; // keeps it the width of the page
 }
 
-.portfolio-link {
+.portfolio-link,
+.portfolio-link:link,
+.portfolio-link:visited,
+.portfolio-link:hover,
+.portfolio-link:active {
   color: $dk-grey;
+  font-weight: bold;
   text-decoration: underline;
 }
 
